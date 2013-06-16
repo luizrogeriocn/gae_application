@@ -5,7 +5,6 @@ class Register():
 
 	@staticmethod
 	def register(self):
-		#cadastro bolado no lookup
 		form_fields = {
 		"endpoint": "roger-pd-app.appspot.com",
 		"id": "roger-pd-app"

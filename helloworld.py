@@ -3,6 +3,7 @@ from google.appengine.api import mail
 from google.appengine.api import capabilities
 from google.appengine.api import urlfetch
 
+from snackbar import SnackBar
 from register import Register
 from mailer import Mailer
 import urllib
@@ -17,9 +18,9 @@ class MainPage(webapp2.RequestHandler):
         user = users.get_current_user()
         if user:
 
-            Mailer.mail(self, user)
-
             Register.register(self)
+
+            Mailer.mail(self, user)
 
         else:
             self.redirect(users.create_login_url(self.request.uri))
