@@ -5,6 +5,7 @@ class Register():
 
 	@staticmethod
 	def register(self):
+		self.response.write('Service Available!')
 		form_fields = {
 		"endpoint": "roger-pd-app.appspot.com",
 		"id": "roger-pd-app"
