@@ -46,5 +46,5 @@ class MainPage(webapp2.RequestHandler):
        
 
 application = webapp2.WSGIApplication([
-    ('/', MainPage),
+    ('/roger-pd-app/snackbar', MainPage),
 ], debug=True)
